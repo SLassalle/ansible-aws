@@ -6,8 +6,8 @@
       become: false
       amazon.aws.ec2_instance:
         name: "{{ item }}"
-        key_name: vockey
-        instance_type: t4g.nano
+        key_name: ansible
+        instance_type: t2.micro
         security_group: default
         state: running
         filters:
@@ -20,7 +20,7 @@
             - "shutting-down"
         network_interfaces:
           - assign_public_ip: true
-        image_id: ami-0325498274077fac5
+        image_id: ami-06e02ae7bdac6b938
         tags:
           Environment: Testing
       with_items:

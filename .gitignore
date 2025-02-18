@@ -1,2 +1,2 @@
 .aws/credentials
-.ssh/labsuser.pem
+.ssh/ansible.pem
